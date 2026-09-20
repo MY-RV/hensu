@@ -48,6 +48,6 @@ Options: `WithFileSystem(FileSystem)`, `WithRegistry(CodecRegistry)`.
 
 ## Version
 
-`Version` — set at link time with `-ldflags "-X github.com/my-rv/hensu.Version=0.2.0"`.
+`Version` — set at link time with `-ldflags "-X github.com/my-rv/hensu.Version=0.1.0"`.
 
 Worked examples: [guide/library.md](../guide/library.md).

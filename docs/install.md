@@ -9,7 +9,7 @@ go install github.com/my-rv/hensu/cmd/hensu@latest
 Local build with injected version:
 
 ```bash
-go build -ldflags "-X github.com/my-rv/hensu.Version=0.2.0" -o hensu ./cmd/hensu
+go build -ldflags "-X github.com/my-rv/hensu.Version=0.1.0" -o hensu ./cmd/hensu
 hensu --version
 ```
 
@@ -28,7 +28,7 @@ scoop bucket add my-rv https://github.com/MY-RV/scoop-bucket
 scoop install hensu
 ```
 
-Tap and bucket are updated by GoReleaser on every release; available since `v0.2.0`.
+Tap and bucket are updated by GoReleaser on every release; available since `v0.1.0`.
 
 ## Without Go (GitHub Releases)
 

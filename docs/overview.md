@@ -16,7 +16,7 @@ Product name: **Hensu**. CLI, module path, and file name stay lowercase `hensu` 
 | `hensu exec -- go run .` | The program gets the values; the caller does not |
 | `hensu` | Usage. There is no bulk read |
 
-## Shape (v0.2)
+## Shape (v0.1)
 
 - File: `./.env` by default, anything else via `-f`
 - Formats: `DOTENV`, `SHEXPORT`, `YAML`, `JSON`, declared by a `# FORMAT:` first line

@@ -17,7 +17,7 @@ The `release-config` check is the one people forget: it runs `goreleaser check`,
 
 ## Tags
 
-Protect the `v*` pattern so a published version cannot be moved. Re-pointing a tag that someone already downloaded breaks `go install` checksums for everyone and cannot be undone by pushing again — ship `v0.2.1` instead.
+Protect the `v*` pattern so a published version cannot be moved. Re-pointing a tag that someone already downloaded breaks `go install` checksums for everyone and cannot be undone by pushing again — ship `v0.1.1` instead.
 
 ## Actions
 

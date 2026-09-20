@@ -1,6 +1,8 @@
 # Changelog
 
-## [0.2.0] — unreleased
+## [Unreleased]
+
+## [0.1.0] — 2026-09-19
 
 ### Security
 - **`--update` verifies SHA-256 against the release `checksums.txt` before

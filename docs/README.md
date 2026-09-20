@@ -11,7 +11,7 @@ Product docs for using and shipping **Hensu** 変数 (CLI/module: `hensu`).
 | [Install](./install.md) | Binaries, Go, Homebrew, self-update |
 | [Distribution](./distribution.md) | Releases and package channels |
 | [Release](./release.md) | Tags + GoReleaser (for publishers) |
-| [Roadmap](./roadmap.md) | Promises for v0.2 / post-v0.2 / v1.0 |
+| [Roadmap](./roadmap.md) | Promises for v0.1 / post-v0.1 / v1.0 |
 | [Contract](./contract.md) | Normative CLI + file behavior |
 | [Security](./security.md) | Threat model, and what is out of scope |
 

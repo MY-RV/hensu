@@ -18,7 +18,7 @@ Other channels and bare binaries: [install.md](./install.md).
 
 ```console
 $ hensu --version
-0.2.0
+0.1.0
 ```
 
 ## 2. Point it at a file

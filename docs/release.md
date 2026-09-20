@@ -35,7 +35,7 @@ Output: `dist/hensu_<ver>_<os>_<arch>` + `SHA256SUMS`.
 ## Verify a published artifact
 
 ```bash
-gh attestation verify hensu_0.2.0_darwin_arm64 --repo MY-RV/hensu
+gh attestation verify hensu_0.1.0_darwin_arm64 --repo MY-RV/hensu
 sha256sum -c checksums.txt --ignore-missing
 ```
 

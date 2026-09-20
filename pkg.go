@@ -12,7 +12,7 @@ import "github.com/my-rv/hensu/internal/store"
 // Version identifies the module/CLI. Override at link time:
 //
 //	-ldflags "-X github.com/my-rv/hensu.Version=1.2.3"
-var Version = "0.2.0"
+var Version = "0.1.0"
 
 type (
 	Format          = store.Format

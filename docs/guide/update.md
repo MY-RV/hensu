@@ -9,15 +9,15 @@ Both are context flags, like `--version`: they never open your config file.
 
 ```console
 $ hensu --update-check
-current: 0.2.0
-latest:  0.2.1
+current: 0.1.0
+latest:  0.1.1
 update available
 
 $ hensu --update
-current: 0.2.0
-latest:  0.2.1
-downloading https://github.com/MY-RV/hensu/releases/download/v0.2.1/hensu_0.2.1_darwin_arm64 → /usr/local/bin/hensu
-updated (hensu_0.2.1_darwin_arm64 verified against checksums.txt)
+current: 0.1.0
+latest:  0.1.1
+downloading https://github.com/MY-RV/hensu/releases/download/v0.1.1/hensu_0.1.1_darwin_arm64 → /usr/local/bin/hensu
+updated (hensu_0.1.1_darwin_arm64 verified against checksums.txt)
 ```
 
 ## What "verified" means
@@ -62,7 +62,7 @@ scoop update hensu
 Every release also carries signed build provenance, which is stronger than a checksum because it says *where the bytes were built*, not just that they did not change in transit:
 
 ```bash
-gh attestation verify hensu_0.2.1_darwin_arm64 --repo MY-RV/hensu
+gh attestation verify hensu_0.1.1_darwin_arm64 --repo MY-RV/hensu
 sha256sum -c checksums.txt --ignore-missing
 ```
 
