@@ -1,0 +1,8 @@
+# Local build artifacts. Anchored to the root on purpose: a bare "hensu" also
+# matches the cmd/hensu package directory, which is the shipped CLI.
+/hensu
+/dist/
+*.exe
+*.test
+*.out
+

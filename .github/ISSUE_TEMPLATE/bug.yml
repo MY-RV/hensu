@@ -1,0 +1,30 @@
+name: Bug report
+description: Something broken or unexpected
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Expected vs actual
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Minimal steps, a config file snippet with the values replaced, OS/arch
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: hensu --version
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste real values.** Replace them, or report with `hensu get` output,
+        which is already masked. If the bug *is* that a value leaked, say so and
+        report it privately instead: see [SECURITY.md](../blob/main/SECURITY.md).

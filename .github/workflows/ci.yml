@@ -1,0 +1,32 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Bootstrap godo
+        run: go install github.com/my-rv/godo/cmd/godo@v0.2.0
+      - name: CI gate (godo.yaml)
+        run: $(go env GOPATH)/bin/godo ci
+
+  # Catches a broken .goreleaser.yaml on every push, instead of at tag time
+  # when a bad config means a failed release.
+  release-config:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - uses: goreleaser/goreleaser-action@v6
+        with:
+          version: "~> v2"
+          args: check

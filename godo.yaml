@@ -1,0 +1,27 @@
+version: "0.1"
+
+scripts:
+  test: go test ./...
+  vet: go vet ./...
+  race: go test -race ./...
+  staticcheck: go run honnef.co/go/tools/cmd/staticcheck@latest ./...
+
+  fuzz-keys: go test -fuzz=FuzzCanonicalKey -fuzztime=5s ./internal/store
+  fuzz-doc: go test -fuzz=FuzzParseDocument -fuzztime=5s ./internal/store
+  fuzz-peek: go test -fuzz=FuzzRevealPeekUTF8 -fuzztime=5s ./internal/store
+
+  # @deps fuzz-keys, fuzz-doc, fuzz-peek
+  fuzz: "true"
+
+  build: go build -o hensu ./cmd/hensu
+
+  # local gate
+  # @deps vet, test
+  check: go build -o hensu ./cmd/hensu
+
+  # no upload
+  release-local: ./scripts/release-local.sh
+
+  # CI gate. bootstrap: go install github.com/my-rv/godo/cmd/godo@v0.2.0
+  # @deps vet, test, race, staticcheck, fuzz, build
+  ci: "true"

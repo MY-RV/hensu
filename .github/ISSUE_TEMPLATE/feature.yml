@@ -1,0 +1,23 @@
+name: Feature request
+description: Something hensu should do and does not
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The task, not the feature you imagined for it
+    validations:
+      required: true
+  - type: textarea
+    id: today
+    attributes:
+      label: How do you do it today?
+      description: The workaround, even if it is ugly. This is the strongest argument a request can carry.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would it look like?
+      description: Optional. A command line you wish worked.
