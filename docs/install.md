@@ -38,7 +38,7 @@ Tap and bucket are updated by GoReleaser on every release; available since `v0.1
    - checksums in the release
 2. Extract if needed, `chmod +x hensu`, move to `$PATH`.
 3. Verify: `hensu --version`.
-4. Verify provenance (optional): `gh attestation verify hensu_<ver>_<os>_<arch> --repo MY-RV/hensu`
+4. Verify checksums: `sha256sum -c checksums.txt --ignore-missing`
 5. Update later: `hensu --update` / `hensu --update-check`  
    (requires public Releases; override: `HENSU_RELEASES_API`). `--update` compares SHA-256 against the release `checksums.txt` before replacing the binary.
 
@@ -46,7 +46,7 @@ Tap and bucket are updated by GoReleaser on every release; available since `v0.1
 
 ```bash
 ./scripts/release-local.sh
-# o, si tenés godo en PATH:
+# or, with godo on PATH:
 godo release-local
 ```
 

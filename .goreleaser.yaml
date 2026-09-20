@@ -83,7 +83,7 @@ scoops:
       token: "{{ .Env.TAP_GITHUB_TOKEN }}"
     homepage: "https://github.com/MY-RV/hensu"
     description: "Machine-local config get/set/dump that agents can read without seeing values"
-    license: "Apache-2.0"
+    license: "MIT"
     skip_upload: '{{ if .Env.TAP_GITHUB_TOKEN }}false{{ else }}true{{ end }}' 
 
 changelog:

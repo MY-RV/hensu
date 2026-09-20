@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.1.1] — 2026-09-19
+
+### Changed
+- Relicensed to **MIT** (aligned with godo). Copies of `v0.1.0` remain under the Apache-2.0 grant they shipped with.
+- Release workflow no longer publishes signed build provenance attestations (same shape as godo). Checksum verification for `--update` is unchanged.
+
 ## [0.1.0] — 2026-09-19
 
 ### Security

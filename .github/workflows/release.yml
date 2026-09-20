@@ -7,9 +7,6 @@ on:
 
 permissions:
   contents: write
-  # Signed build provenance for every published artifact.
-  id-token: write
-  attestations: write
 
 jobs:
   release:
@@ -33,9 +30,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Optional: absent secret → tap/bucket push is skipped, not failed.
           TAP_GITHUB_TOKEN: ${{ secrets.TAP_GITHUB_TOKEN }}
-      - name: Attest build provenance
-        uses: actions/attest-build-provenance@v2
-        with:
-          subject-path: |
-            dist/hensu_*
-            dist/checksums.txt

@@ -21,15 +21,13 @@ Protect the `v*` pattern so a published version cannot be moved. Re-pointing a t
 
 ## Actions
 
-The release workflow needs `contents: write` for the release itself, plus `id-token: write` and `attestations: write` for build provenance. Those are declared in the workflow, but the repository has to allow workflows to request them: Settings → Actions → General → Workflow permissions.
+The release workflow needs `contents: write` (declared in the workflow). Settings → Actions → General → Workflow permissions must allow that.
 
 Add `TAP_GITHUB_TOKEN` as a repository secret — a PAT that can write to `MY-RV/homebrew-tap` and `MY-RV/scoop-bucket`. The built-in `GITHUB_TOKEN` cannot reach another repository. Without the secret the release still publishes; it just skips the cask and the manifest, leaving package users on the previous version.
 
 ## Security
 
 Enable private vulnerability reporting: Settings → Code security → Private vulnerability reporting. [SECURITY.md](../../SECURITY.md) points people at it, so it needs to exist before someone follows the instructions.
-
-Dependabot alerts are worth having even for a module with this few dependencies — the ones it does have handle untrusted input.
 
 ## Issues
 

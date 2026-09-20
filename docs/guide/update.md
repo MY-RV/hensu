@@ -59,10 +59,7 @@ scoop update hensu
 
 ## Verifying by hand
 
-Every release also carries signed build provenance, which is stronger than a checksum because it says *where the bytes were built*, not just that they did not change in transit:
-
 ```bash
-gh attestation verify hensu_0.1.1_darwin_arm64 --repo MY-RV/hensu
 sha256sum -c checksums.txt --ignore-missing
 ```
 

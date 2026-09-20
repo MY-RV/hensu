@@ -7,7 +7,7 @@ What `v0.1` promises, what it does not, and what would have to be true for `v1.0
 - The CLI contract in [contract.md](./contract.md): flags, commands, reveal modes, exit codes, key canonicalization, the `# FORMAT:` header.
 - `peek` as the default, and `trust` as the only way to raw output.
 - Atomic, locked, comment-preserving writes at mode `0600`.
-- Checksum-verified `--update`, and signed provenance on every release artifact.
+- Checksum-verified `--update`.
 
 ## Not promised in v0.1
 
