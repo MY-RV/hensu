@@ -28,10 +28,9 @@ The fully-qualified Homebrew name avoids clashing with unrelated taps.
 
 ```bash
 sha256sum -c checksums.txt --ignore-missing
-gh attestation verify hensu_0.1.0_darwin_arm64 --repo MY-RV/hensu
 ```
 
-Every release artifact carries signed build provenance. `hensu --update` does the checksum half on its own and refuses a release that publishes none — see [install.md](./install.md).
+`hensu --update` does that check on its own and refuses a release that publishes no checksums — see [install.md](./install.md).
 
 ## Not channels
 

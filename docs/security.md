@@ -11,7 +11,6 @@ Hensu reads and writes **machine-local config files** that often contain secrets
 | Concurrent writers | Lost updates / torn files | Sidecar flock (`*.hensu-lock`) + atomic rename |
 | Path confusion | Writing the wrong file | Explicit `--file`; default is cwd `./.env` only |
 | Self-update channel | Tampered or wrong binary replacing Hensu | SHA-256 checked against the release `checksums.txt`; no checksums → refuse |
-| Released artifacts | Unverifiable provenance | Signed build provenance attestations on every release |
 | Lock sidecar | Extra file next to config | Expected; mode `0600`; do not delete while processes may wait |
 
 ## The default is not to show

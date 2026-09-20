@@ -29,13 +29,12 @@ Output: `dist/hensu_<ver>_<os>_<arch>` + `SHA256SUMS`.
 1. `godo ci` green on `main` (on the remote, not only locally)
 2. CHANGELOG with today's date
 3. Annotated tag `vX.Y.Z` and push the tag
-4. **release** workflow: gate (`godo ci`) → GoReleaser → archives, bare binaries and `checksums.txt` → Homebrew cask (`MY-RV/homebrew-tap`, `Casks/` directory) + Scoop bucket → provenance attestation
+4. **release** workflow: gate (`godo ci`) → GoReleaser → archives, bare binaries and `checksums.txt` → Homebrew cask (`MY-RV/homebrew-tap`, `Casks/` directory) + Scoop bucket
 5. Users: `brew`, `scoop`, direct download, `go install …@vX.Y.Z`, or `hensu --update`
 
 ## Verify a published artifact
 
 ```bash
-gh attestation verify hensu_0.1.0_darwin_arm64 --repo MY-RV/hensu
 sha256sum -c checksums.txt --ignore-missing
 ```
 

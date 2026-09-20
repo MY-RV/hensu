@@ -42,4 +42,4 @@ go install github.com/my-rv/godo/cmd/godo@latest
 godo ci
 ```
 
-[Contributing](./CONTRIBUTING.md) · [Security](./SECURITY.md) · [Apache-2.0](./LICENSE)
+[Contributing](./CONTRIBUTING.md) · [Security](./SECURITY.md) · [MIT](./LICENSE)

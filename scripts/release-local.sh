@@ -2,7 +2,7 @@
 # Build release-like artifacts locally (no GitHub upload).
 # Usage:
 #   ./scripts/release-local.sh
-#   VERSION=v0.2.0 ./scripts/release-local.sh
+#   VERSION=v0.1.0 ./scripts/release-local.sh
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
@@ -12,9 +12,9 @@ if [[ -z "$VERSION" ]]; then
   if VERSION=$(git describe --tags --exact-match 2>/dev/null); then
     :
   elif VERSION=$(git describe --tags --always --dirty 2>/dev/null); then
-    VERSION="0.2.0-dev+${VERSION}"
+    VERSION="0.1.0-dev+${VERSION}"
   else
-    VERSION="0.2.0-dev"
+    VERSION="0.1.0-dev"
   fi
 fi
 VERSION="${VERSION#v}"
